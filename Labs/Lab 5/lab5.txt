@@ -1,0 +1,162 @@
+PART 1 - https://www.scs.ryerson.ca/~flevina/lab5.php
+
+<!DOCTYPE html>
+<html>
+<head>
+        <title> Multiplication </title>
+        <link rel = "stylesheet" type = "text/css" href="style.css"/>  
+</head>
+
+<body class="part1">
+        <h1>Multiplication Table</h1>
+        <p> Felicia Levina </p>
+
+        <div class="submission">
+                <form action="lab5.php" method="post">
+                <p># of Row(s) : <input type="text" size = "2" name="row"><br> </p>
+                <p># of Column(s) : <input type="text" size="2" name="column"><br> </p>
+                <input type="submit">
+                </form>
+        </div>
+
+        <br> <br>
+
+        <h1>Table Result</h1>
+
+
+        <div class="result">
+<?php
+$row= $_POST['row'];
+$column= $_POST['column'];
+
+
+if($row >= 3 && $row <= 12 && $column >=3 && $column <= 12)
+{
+        echo "<p><b>$row x $column Table</b></p>";
+        echo"<table>";
+        for($value = 1; $value <= $row; $value+=1)
+        {
+                echo "<tr>";
+                for($value2 = 1; $value2 <= $column; $value2+=1)
+                {
+                        $result = $value * $value2;
+                        echo "<th> $result </th>";
+                }
+
+                echo "</tr>";
+        }
+        echo "<br>";
+        echo "</table>";
+}
+
+elseif( $row < 3 || $row > 12 || $column < 3 || $column > 12)
+{
+        echo "<p> PLEASE INSERT THE CORRECT INPUT </p>";
+}
+
+?>
+</div>
+
+        <br>
+
+        <h1> Number of Visit(s) </h1>
+
+        <div class="counter">
+                <?php
+                session_start();
+                if(isset($_SESSION['views']))
+                 $_SESSION['views'] = $_SESSION['views']+ 1;
+                else
+                 $_SESSION['views'] = 1;
+                echo "<p><b># of visit = </p>" .$_SESSION['views'];
+                ?>
+        </div>
+
+        <br><br>
+</body>
+</html>
+
+
+
+PART 2
+
+<!DOCTYPE html>
+
+<%
+Response.Cookies("lastvisit")
+Response.Cookies("lastvisit").Expires = Date() + 1
+%>
+
+<html>
+
+<head>
+<title> Lab 5 Background </title>
+<link href="https://fonts.googleapis.com/css?family=Srisakdi&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<h1 style="text-align:center; font-family: 'Srisakdi', cursive;">Felicia Levina / 500856106</h1>
+
+<br><br><br><br><br><br><br>
+
+<div style="border-style: dotted; border-width: 10px; width: 300px; margin: auto; text-align:center; padding: 50px">
+
+<%
+lasvis = Request.Cookies("lastvisit")
+if lasvis = "" then
+Response.Write("This is your first visit to this page!")
+else
+Response.Write("Your last visit to this page was on: " & lasvis)
+End if
+
+Dim d_today
+d_today=DateAdd("h",3,now)
+result="<br/><br />" & FormatDateTime(d_today,1) & "<br/><br/>" & FormatDateTime(d_today,3) & "<br />"
+Response.Cookies("lastvisit")=result
+%>
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<%
+color = Request.QueryString("Color")
+
+select case color
+case "red"
+%>
+<body style="background-color:#FF6961">
+
+<%case "pink"%>
+<body style="background-color:#FBCCD1">
+
+<%case "blue"%>
+<body style="background-color:#ADD8E6">
+
+<%case "purple"%>
+<body style="background-color:#D0C9EA">
+
+<%case "orange"%>
+<body style="background-color:#FFDF9E">
+
+<%case "green"%>
+<body style="background-color:#CFF0CC">
+
+<%case "yellow"%>
+<body style="background-color:#FEFEBE">
+
+<%case "gray"%>
+<body style="background-color:#F5F5F5">
+
+<%case "brown"%>
+<body style="background-color:#D2B48C">
+
+<%
+case Else
+end select
+%>
+
+</body>
+</html>
+

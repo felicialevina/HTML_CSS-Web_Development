@@ -1,0 +1,225 @@
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+
+<title>Materialize CSS</title>
+<style>
+
+</style>
+</head>
+<body>
+
+
+
+
+<!--Creating Title Card for Page-->
+<div class="card">
+<div class="center-align">
+<div class="card-content">
+<div class="black-text card-panel red lighten-2 ">
+<h2>Creating Your Page with Materialize </h2>
+<span class="card-title center-align"> Tutorial </span>
+</div>	
+</div>
+</div>
+</div>
+
+
+<!--List of topics-->
+
+<div class="left-align">
+<h5> This tutorial will cover the following topics: </h5>
+
+  <div class="row">
+      <div class="col s6">  1. Images: Inserting your downloaded images onto page </div>
+      <div class="col s9">  2. Responsive Images: Your images don't have to be in a fixed location on your page. Using a "responsive-img" tag, images can resize responsively </div>
+      <div class="col s7">  3. Icons: Importing Materialize icons on page </div>
+      <div class="col s8">  4. Buttons: Materialize offers different designs to personalize your buttons from floating buttons, raised buttons and 'pulse' buttons </div>
+      <div class="col s10"> 5. Creating 'Cards' to hold images and information. Cards are similair to text-boxes an act as container/backdrop to your images and information </div>
+      <div class="col s11"> 6. Specify exact location of page's components using 'Grid' </div>
+     </div>
+</div>
+
+
+<h3> The following explanations use a demo "Weekly Schedule" page as basis for explaining different feautures of Materialize </h3>
+<!--Card for Images-->
+
+<div class="card">
+<h4> Images </h4>
+<div class="left-align">
+<div class="black-text card-panel red lighten-4 ">
+<span class="card-title left-align"> To import a downloaded image from your files use <img src> tag with the saved name of the image. </span>
+<p> Example: &lt;img src="parallax1.jpg&gt;</p>
+</div>
+</div>
+</div>
+
+
+
+
+<!--Card for Responsive Images-->
+<div class="card">
+<h4> Responsive Images </h4>
+<div class="left-align">
+<div class="black-text card-panel red lighten-4">
+<span class="card-title left-align"> To make your image resize responsively add class="responsive-img" to your image tag </span>
+<span class="card-title left-align"> The following code will use a responsive image as the backdrop for your Weekly Schedule page:  </span>
+<p> Code: &lt;img src="parallax1.jpg" class="responsive-img"&gt; </p>
+
+</div>
+</div>
+</div>
+
+<h4> Result: </h4>
+
+
+	
+ <!--Parallax Image 1-->
+
+ <div class="parallax-container">
+    <div class="parallax">
+	<img src="parallax1.jpg" class="responsive-img">
+   </div>
+ </div>
+
+
+<!--Card for Icons-->
+<div class="card">
+<h4> Icons </h4>
+<div class="left-align">
+<div class="black-text card-panel red lighten-4">
+<span class="card-title left-align"> To use Materialize icons on your page use the: &lt;i class="material-icons&gt;" code with the name of the icon you'd like to import. </span>
+<span class="card-title left-align"> The name of all the icons can be found on the Materialize site at https://materializecss.com/icons.html </span>
+<p> Example using icon called "event_note": &lt;i class="material-icons #ef9a9a-text" style="font-size: 150px">event_note&lt;/i&gt;  </p>
+</div>
+</div>
+</div>
+ 
+<h4> Result: Highlighted is the icon on Demo Page: </h4>
+
+
+ <div class="parallax-container">
+    <div class="parallax">
+        <img src="ss1.png" class="responsive-img">
+   </div>
+ </div>
+  
+
+<!--Card for Cards-->
+<div class="card">
+<h4> Cards </h4>
+<div class="left-align">
+<div class="black-text card-panel red lighten-4">
+<span class="card-title left-align"> 'Cards' are very similair to textboxes in Materialize. They allow for a backdrop/container for your images and information </span>
+<p> -  Cards are made using &lt;div class="card"&gt; code </p>
+<p> -  To personalize card you can add more details to line of code:  &lt;div class="card blue-grey darken-1"&gt; OR import an image into the card with the image tag</p>
+<p> -  To write text in card, use span class: &lt;span class="card-title center-align"&gt;  </p>
+<p> Example on creating and personalizing card using an imported image and adding a title: </p>
+<p>          &lt;div class="card"&gt; </p>
+<p>          &lt;div class="card-content"&gt; </p>
+<p>          &lt;img src="exam1.jpg"&gt; </p>
+<p>          &lt;/div&gt;   </p>
+<p>           &lt;span class="card-title center-align">Got an exam? Set up your studying schedule!&lt;/span&gt;
+	  &lt/div&gt;
+</div>
+</div>
+</div>
+
+
+
+<h4> Result: How Card would appear on Demo Page: </h4>
+
+
+ <div class="parallax-container">
+    <div class="parallax">
+        <img src="ss2.png" >
+   </div>
+ </div>
+
+
+<!--Card for Buttons-->
+<div class="card">
+<h4> Buttons </h4>
+<div class="left-align">
+<div class="black-text card-panel red lighten-4">
+<span class="card-title left-align"> You can use buttons as an interactive component on your page using: &lt;a class="btn"&gt;button&lt/a&gt; </span>
+<h5>  Result: </h5> 
+<a class="btn">button</a> 
+<p> </p>
+<span class="card-title left-align"> You can even personalize the buttons like making a 'pulse' button which would have a unqiue effect. To use this add pulse class to button: </span>
+<p>          &lt;a class="btn-floating pulse"&gt;&lt;i class="material-icons"&gt;favorite&lt;/i&gt;&lt;/a&gt;</p>
+</div>
+</div>
+</div>
+
+
+<h4> Result: </h4>
+
+<a class="btn-floating pulse"><i class="material-icons">favorite</i></a>
+
+
+
+<!--Card for Grids-->
+<div class="card">
+<h4> Grids </h4>
+<div class="left-align">
+<div class="black-text card-panel red lighten-4">
+<span class="card-title left-align"> The 'Grid' is a grid system that uses columns and row numbers to pinpoint the exact location of items  </span>
+<p> To use this first use the &lt;div class="row"&gt; which sets up the grid system </p>
+<p> To decide what column to place your component in, use &lt;div class="col s1"&gt; where s1 can be changed to s2,s3 etc to decide how many columns your component will span. </p>
+<p> A simple example uses the following code where we list icons using the grid system</p>
+
+<p> Example: </p>
+<h5> First Icon </h5>
+<p> &lt;div class="row"&gt; </p>
+<p> &lt;div class="col s4" style="height: 150px"&gt; </p>
+<p> &lt;i class="material-icons #ef9a9a-text" style="font-size: 150px"&gt;event_note&lt;/i&gt; </p> 
+<p> &lt;/div&gt; </p>
+<p> &lt;/div&gt; </p>
+
+
+<h5> Second Icon </h5>
+<p> &lt;div class="row"&gt; </p>
+<p> &lt;div class="col s4" style="height: 150px"&gt; </p>
+<p> &lt;i class="material-icons #ef9a9a-text" style="font-size: 150px"&gt;add&lt;/i&gt; </p>
+<p> &lt;/div&gt; </p>
+<p> &lt;/div&gt; </p>
+
+</div>
+<h4> Result: </h4>
+
+<div class="row">
+<div class="col s4" style="height: 150px">
+<i class="material-icons #ef9a9a-text" style="font-size: 150px">event_note</i>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col s4" style="height: 150px">
+<i class="material-icons #ef9a9a-text" style="font-size: 150px">add</i>
+</div>
+</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+ 	
+	<!-- Compiled and minified JavaScript -->
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+						$('.sidenav').sidenav();
+						$('.parallax').parallax();
+					})
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,348 @@
+PART 1 - http://webdev.scs.ryerson.ca/~flevina/lab6.php
+
+<?php
+
+echo "<html>";
+echo "<head>";
+echo "<title> Ontario Views </title>";
+echo "</head>";
+
+echo "<body style= 'background-color: #cac0e1'>";
+
+echo "<h1 style = 'text-align:center; margin: 0px;'> Ontario Views </h1>";
+echo "<h4 style='text-align:center; margin: 3px;'> Felicia Levina </h4>";
+echo "<h3> Picture Text Information </h3>";
+
+$conn=mysqli_connect("localhost", "flevina", "tackrev4", "flevina")
+or die(mysql_error());
+
+$sql="CREATE TABLE photograph(
+        subject VARCHAR(50) NOT NULL,
+        location VARCHAR(50) NOT NULL,
+        date_taken VARCHAR(10) NOT NULL,
+        url TEXT NOT NULL)";
+
+mysqli_query($conn,$sql);
+
+$sql="INSERT INTO photograph(subject, location, date_taken, url)
+        VALUES('Parliament Hill', 'Ottawa, Ontario', '2019-09-10', 'https://www.chatelaine.com/wp-content/uploads/2019/09/ottawa-tourism-fall-hero.jpg')";
+
+mysqli_query($conn,$sql);
+
+$sql="INSERT INTO photograph(subject, location, date_taken, url)
+        VALUES('City Hall', 'Toronto, Ontario', '2017-04-15', 'http://www.orangesmile.com/common/img_cities_original/ontario-ca-659-8.jpg')";
+
+mysqli_query($conn,$sql);
+
+$sql="INSERT INTO photograph(subject, location, date_taken, url)
+        VALUES('Toronto City Line', 'Toronto, Ontario', '2018-05-12', 'http://www.orangesmile.com/common/img_cities_original/ontario-ca-659-10.jpg')";
+
+mysqli_query($conn,$sql);
+
+$sql="INSERT INTO photograph(subject, location, date_taken, url)
+        VALUES('Niagara Falls', 'Ontario Border', '2019-11-01', 'https://www.movingwaldo.ca/wp-content/uploads/2019/01/Ontario-1024x602.jpeg')";
+
+mysqli_query($conn,$sql);
+
+$sql="INSERT INTO photograph(subject, location, date_taken, url)
+        VALUES('Cottage Country', 'Southern Ontario', '2019-10-13', 'https://thecanadaguide.com/wp-content/uploads/muskokanature-1600x1066.jpg')";
+
+mysqli_query($conn,$sql);
+
+$sql = "SELECT subject, location, date_taken FROM photograph ORDER BY date_taken";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+        echo "<table border='1' width='75%' align='center'>";
+                echo "<tr>";
+                        echo "<th width='25%'> Subject </th>";
+                        echo "<th width='25%'> Location </th>";
+                        echo "<th width='25%'> Date Taken </th>";
+                echo "</tr>";
+while($row = mysqli_fetch_array($result)) {
+                echo "<tr>";
+                        echo "<th>" . $row["subject"]. "</th>";
+                        echo "<th>" . $row["location"]. "</th>";
+                        echo "<th>". $row["date_taken"]. "</th>";
+                echo "</tr>";
+    }
+        echo "</table>";}
+
+echo "<h3> Ontario Pictures </h3>";
+
+$sql = "SELECT subject, location, url FROM photograph";
+$result2 = mysqli_query($conn, $sql);
+
+while($line = mysqli_fetch_array($result2))
+{
+echo "<div align='center' style='float:left;text-align:center;margin:0px 23px;width:200px;height:100px;fon
+tsize:1.2em;line-height: 105%;'>";
+echo "<br>";
+$url = $line["url"];
+echo "<img src=";
+echo $url;
+echo " width='225' height='150' style='border-radius:15px;border:3px solid white;'><div style='text-transform:uppercase;fontweight:400;position:relative;left:15px;top:10px;'>";
+echo $line["subject"];
+echo "</div><div style='position:relative;left:15px;top:15px;font-weight:300;'>";
+echo $line["location"];
+echo "</div></div>";
+}
+
+echo "</body>";
+
+$sql="DROP TABLE photograph";
+mysqli_query($conn,$sql);
+
+mysqli_close($conn);
+?>
+
+
+
+PART 2 - http://scs.ryerson.ca/~flevina/lab6rb.html
+
+FORM (change form action to lab6.py for python)
+
+<html>
+<head>
+        <title> Lab 6 Form </title>
+
+        <script type="text/JavaScript">
+
+
+        function formValidation() 
+        {
+                var n = document.registration.name;
+                
+                var p = document.registration.phone;
+
+                var result = name_validation(n) && phone_validation(p);
+                return result;  
+        }
+
+        function name_validation(n)
+        {
+                var n_len = n.value.length;
+                var n_char = /^[A-Za-z ]+$/;
+                if(n_len == 0) 
+                {
+                        alert("Name cannot be empty");
+                        return false;
+                }
+
+                if(!n.value.match(n_char)) 
+                {
+                        alert("Name must be alphabet only");
+                        return false;
+                } 
+
+                else 
+                {
+                        return true;
+                }
+        }
+
+
+        function phone_validation(p)
+        {
+                var p_len = p.value.length;
+                var p_char = /^[1-9]{3}[-][0-9]{3}[-][0-9]{4}$/;
+                if(p_len == 0) 
+                {
+                        alert("Phone number cannot be empty");
+                        return false;
+                }
+
+                if(!p.value.match(p_char)) 
+                {
+                        alert("Incorrect phone number format");
+                        return false;
+                } 
+
+                else 
+                {
+                        return true;
+                }
+        }
+        </script>
+
+</head>
+
+<body style="background: url(https://pbs.twimg.com/media/DkMXUmAXsAAAON1.jpg); background-repeat: repeat-y; background-size: 100% auto;">
+
+        <h1 style="text-align:center;margin: 0px;"> User Profile Information </h1>
+        <h4 style='text-align:center; margin: 5px;'> Felicia Levina </h4>
+
+        <br><br><br><br><br><br><br><br><br><br><br>
+
+        <form name="registration" action="http://www2.scs.ryerson.ca/~flevina/cgi-bin/lab6.rb" method="post" onsubmit="return formValidation();">
+                <div style="width:25%; text-align: center; margin: auto; border: 5px double black;">
+                        <br>
+                        <h2> What is your name? </h2>
+                        Name: <input type="text" name="name" style="margin-left: 25px;">
+                        <br><br><br><br>
+                </div>
+
+                <p style="font-size:5px;"></p><br><br><br><br><br><br><br><br><br><br>
+
+                <div style="width: 30%; text-align: center; margin:auto ; border: 5px double black;">
+                        <br>
+                        <h2> What is your address? </h2>
+                        Street Address: <input type="text" name="address" style="margin-left: 15px;"><br><p style="font-size:5px;"></p>
+                        City: <input type="text" name="city" style="margin-left: 81px;"><br><p style="font-size:5px;"></p>
+                        Province: <input type="text" name="province" style="margin-left: 52px;"><br>
+                        <br>
+                </div>
+
+                <p style="font-size:10px;"></p><br><br><br><br><br><br><br><br><br>
+
+                <div style="width: 35%; text-align: center; margin:auto; border: 5px double black;">
+                        <br>
+                        <h2> What is your phone number? </h2>
+                        <p> Format: XXX-XXX-XXXX </p>
+                        Phone Number: <input type="text" name="phone" style="margin-left: 40px;">
+                        <br><br>
+                </div>
+
+                <br>
+
+                <div style="text-align:center;">
+                        <input type="submit">
+                </div>
+        </form>
+</body>
+</html>
+
+
+
+
+
+RUBY CGI
+
+#!/usr/local/bin/ruby -w
+puts "Content-type: text/html\n\n"
+require 'cgi'
+cgi = CGI.new
+
+
+n = cgi['name']
+a = cgi['address']
+c = cgi['city']
+p = cgi['province']
+pn = cgi['phone']
+
+val = pn.split("-")
+
+
+puts"<html>
+<head>
+        <title> Lab 6 Ruby </title>
+        
+        <script src=https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js></script> 
+        
+        <script>
+        $(document).ready(function(){
+                $('b.hide1').fadeIn(7000).removeClass('hide1');
+                $('b.hide2').fadeIn(9000).removeClass('hide2');
+                $('b.hide3').fadeIn(11000).removeClass('hide3');
+        });
+        </script>
+
+        <style>
+                .hide1
+                {display: none;}
+                
+                .hide2
+                {display: none;}
+
+                .hide3
+                {display: none;}
+        </style>
+</head>
+
+<body style='background: url(https://pbs.twimg.com/media/DkMXUmAXsAAAON1.jpg); background-repeat: repeat-y; background-size: 100% auto;'>
+
+        <h1 style='text-align:center;margin: 0px;'> Your Profile in Ruby </h1>
+        <h4 style='text-align:center; margin: 5px;'> Felicia Levina </h4>
+
+        <br><br><br><br><br><br><br><br><br><br>
+"
+
+puts "<p style='text-align: center; font-size:50px;'>"
+puts "Name: <br>" + n.split.map(&:capitalize).join(' ')
+
+puts "</p><br><br><br><br><br><br><br><br>"
+
+puts "<p style='text-align:center; font-size: 50px;'>"
+puts "Address: <br>" + a.split.map(&:capitalize).join(' ') + ", " + c.capitalize + ", " + p.capitalize
+
+puts "</p><br><br><br><br><br><br><br>"
+
+
+
+puts "<p style='text-align: center; font-size:50px;'>"
+puts "Phone number: <br>"
+
+puts "<b style='color:#ff6961' class='hide1'>"
+puts "(" + val[0] + ") </b>"
+
+puts "<b style='color:#779ecb' class='hide2'>"
+puts " " + val[1] + "</b>"
+
+puts "<b style='color:#77dd77' class='hide3'>"
+puts "-" + val[2] + "</p>"
+
+puts"</body>"
+puts"</html>"
+
+
+
+
+
+PYTHON CGI
+#!/usr/bin/python
+print "Content-type: text/html\n\n"
+import cgi
+
+form = cgi.FieldStorage()
+
+name = form.getfirst("name")
+address = form.getfirst("address")
+city = form.getfirst("city")
+province = form.getfirst("province")
+phone = form.getfirst("phone")
+
+val = phone.split("-")
+
+print "<html>"
+print "<head>"
+print "<title> Lab 6 Python </title>"
+
+print "<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>"
+print "<script>"
+print "$(document).ready(function(){"
+print "$('div').animate({left: '475px'}, 5000)"
+print "});"
+print "</script>"
+
+print "</head>"
+
+print "<body style='background: url(https://pbs.twimg.com/media/DkMXUmAXsAAAON1.jpg); background-repeat: repeat-y; background-size: 100% auto;'>"
+
+print "<h1 style='text-align:center;margin: 0px;'> Your Profile in Python </h1>"
+print "<h4 style='text-align:center; margin: 5px;'> Felicia Levina </h4>"
+print "<br><br><br><br><br><br><br><br><br><br>"
+
+print "<p style='text-align: center; font-size:50px;'> Name: <br>" + name.title() +  "</p>"
+
+print "</p><br><br><br><br><br><br><br>"
+
+print "<p style='text-align: center; font-size:50px;'> Address: <br>" + address.title() + ", " + city.capitalize() + ", " + province.capitalize() + "</p>"
+
+print "</p><br><br><br><br><br><br><br>"
+
+print "<div style='width: 400px; position: absolute;'><p style='font-size:50px;'>"
+print "Phone number: <br>" + "(" + val[0] + ")" + " " + val[1] + "-" + val[2] + "</p></div>"
+
+
+print "</body>"
+print "</html>"

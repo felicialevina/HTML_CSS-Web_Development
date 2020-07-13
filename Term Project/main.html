@@ -1,0 +1,387 @@
+<html lang="en">
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+
+<title>Materialize CSS</title>
+<style>
+
+body{
+font-family: 'Roboto';
+}
+
+nav .badge{
+	position: relative;
+	right: 40px;
+}
+
+.col > div{
+	height: 300px;
+    }
+
+.small{
+	height: 120px;
+}
+.material-icons 
+{ 	
+	color: #ef9a9a;
+	position: center;
+	font-size: 270px; 
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+div.solid {
+padding: 15px;
+border-style: solid;
+border-width: 15px;
+border-color: white;
+color: white;
+}
+footer {
+    background-color: red;
+    height: 100px;
+    }
+</style>
+</head>
+<body>
+
+
+  <!--Navigation Bar-->
+
+  <nav class="nav-wrapper">
+	<div class="container">
+	<a href="#" class="brand-logo">Your Weekly Schedule</a>
+	<a href="#" class="sidenav-trigger" data-target="mobile-links">
+	<i class="material-icons">menu</i>
+	</a>
+	<ul class="right hide-on-med-and-down">
+	<li><a href="index.html">Home</a></li>
+	<li><a href="install.html">Install</a></li>
+	<li><a href="tutor.html">Tutorials</a></li>
+	<li><a href="rate.html">Ratings</a></li>
+	<li><a href="credits.html">Credits</a></li>
+	<li><a href="#" class="btn-floating pink darken-4">
+	<i class="material-icons">notifications</i>
+	</a></li>
+	<li><span class="badge white-text pink new">5</span></li></li>
+	</ul>
+	</div>
+  </nav>
+
+	
+  <!--Side Navigation Bar for smaller screens-->
+
+  <ul class="sidenav" id="mobile-links">
+	<li><a href="index.html">Home</a></li>
+	<li><a href="install.html">Install</a></li>
+	<li><a href="tutor.html">Tutorials</a></li>
+	<li><a href="rate.html">Ratings</a></li>
+	<li><a href="credits.html">Credits</a></li>
+	<li><a href="#">Login</a></li>
+  </ul>
+
+	
+ <!--Parallax Image 1-->
+
+ <div class="parallax-container">
+    <div class="parallax">
+	<img src="parallax1.jpg" class="responsive-img">
+	 <div class="centered solid" style="font-size: 100px">Welcome</div>
+    </div>
+ </div>
+
+
+ <!--Grids for Icons and Cards-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12 l4">
+
+       <!--Creating the Icon-->
+
+	<i class="material-icons #e57373-text">event_note</i>
+      </div>
+      <div class="col s12 l8">
+	
+      <!--Creating the card-->
+
+	<div class="card">
+	  <div class="card-content">
+		<div class="card-image">
+			<img src="planner1.jpg">
+
+			<!--Creating the floating button with pulse-->
+
+			<a href="#" class="halfway-fab btn-floating pink pulse">
+				<i class="material-icons">favorite</i>
+			</a>
+	  	</div>
+			<span class="card-title center-align"><br></span>
+			<span class="card-title center-align">Plan your whole week in the easiest way possible!</span>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+
+ <div class="container">
+    <div class="row">
+      <div class="col s12 l4">
+
+       <!--Creating the Icon-->
+
+       <i class="material-icons #e57373-text">people</i>
+      </div>
+      <div class="col s12 l8">
+
+      <!--Creating the card-->
+
+	<div class="card">
+	  <div class="card-content">
+		<div class="card-image">
+			<img src="meeting1.jpg">
+
+			<!--Creating the floating button with pulse-->
+
+			<a href="#" class="halfway-fab btn-floating pink pulse">
+				<i class="material-icons">favorite</i>
+			</a>
+	  	</div>
+			<span class="card-title center-align"><br></span>
+			<span class="card-title center-align">Never be late to a meeting again!</span>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+
+ <div class="container">
+    <div class="row">
+      <div class="col s12 l4">
+
+       <!--Creating the Icon-->
+
+       <i class="material-icons #e57373-text">school</i>
+      </div>
+      <div class="col s12 l8">
+
+      <!--Creating the card-->
+
+	<div class="card">
+	  <div class="card-content">
+		<div class="card-image">
+			<img src="exam1.jpg">
+
+			<!--Creating the floating button with pulse-->
+
+			<a href="#" class="halfway-fab btn-floating pink pulse">
+				<i class="material-icons">favorite</i>
+			</a>
+	  	</div>
+			<span class="card-title center-align"><br></span>
+			<span class="card-title center-align">Got an exam? Set up your studying schedule!</span>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+
+ <!--Parallax Image 2-->
+
+ <div class="parallax-container">
+    <div class="parallax">
+	<img src="parallax2.jpg" class="responsive-img">
+    </div>
+ </div>
+
+<div class="container center-align">
+<h1>Create Your Schedule</h1>
+</div>
+
+<!--Creating the Grid1-->
+
+<div class="container center-align">
+<div class="row">
+      <div class="col s4" style="height: 150px">
+	<div class="container center-align">
+	<b style="font-family: 'Aclonica'; font-size: 22px">Mon</b><br>
+	 	<i class="material-icons #ef9a9a-text" style="font-size: 150px">event_note</i>
+        <a href="#" class="btn-floating red lighten-4 pulse" style="position: relative; left: 20px; bottom: 75px">
+		<i class="material-icons">add</i>
+	</a>
+        </div>
+      </div>
+      <div class="col s4" style="height: 150px">
+	<div class="container center-align">
+	<b style="font-family: 'Aclonica'; font-size: 22px">Tue</b><br>
+	 	<i class="material-icons #ef9a9a-text" style="font-size: 150px">event_note</i>
+        <a href="#" class="btn-floating red lighten-4 pulse" style="position: relative; left: 20px; bottom: 75px">
+		<i class="material-icons">add</i>
+	</a>
+        </div>
+      </div>
+      <div class="col s4" style="height: 150px">
+	<div class="container center-align">
+	<b style="font-family: 'Aclonica'; font-size: 22px">Wed</b><br>
+	 	<i class="material-icons #ef9a9a-text" style="font-size: 150px">event_note</i>
+        <a href="#" class="btn-floating red lighten-4 pulse" style="position: relative; left: 20px; bottom: 75px">
+		<i class="material-icons">add</i>
+	</a>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<!--Creating the Grid1-->
+
+<div class="container center-align">
+<div class="row">
+      <div class="col s3" style="height: 150px">
+	<div class="container center-align">
+	<b style="font-family: 'Aclonica'; font-size: 22px">Thu</b><br>
+	 	<i class="material-icons #ef9a9a-text" style="font-size: 150px">event_note</i>
+        <a href="#" class="btn-floating red lighten-4 pulse" style="position: relative; left: 20px; bottom: 75px">
+		<i class="material-icons">add</i>
+	</a>
+        </div>
+      </div>
+      <div class="col s3" style="height: 150px">
+	<div class="container center-align">
+	<b style="font-family: 'Aclonica'; font-size: 22px">Fri</b><br>
+	 	<i class="material-icons #ef9a9a-text" style="font-size: 150px">event_note</i>
+        <a href="#" class="btn-floating red lighten-4 pulse" style="position: relative; left: 20px; bottom: 75px">
+		<i class="material-icons">add</i>
+	</a>
+        </div>
+      </div>
+      <div class="col s3" style="height: 150px">
+	<div class="container center-align">
+	<b style="font-family: 'Aclonica'; font-size: 22px">Sat</b><br>
+	 	<i class="material-icons #ef9a9a-text" style="font-size: 150px">event_note</i>
+        <a href="#" class="btn-floating red lighten-4 pulse" style="position: relative; left: 20px; bottom: 75px">
+		<i class="material-icons">add</i>
+	</a>
+        </div>
+      </div>
+      <div class="col s3" style="height: 150px">
+	<div class="container center-align">
+	<b style="font-family: 'Aclonica'; font-size: 22px">Sun</b><br>
+	 	<i class="material-icons #ef9a9a-text" style="font-size: 150px">event_note</i>
+        <a href="#" class="btn-floating red lighten-4 pulse" style="position: relative; left: 20px; bottom: 75px">
+		<i class="material-icons">add</i>
+	</a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<br>
+
+
+ <!--Parallax Image 3-->
+
+ <div class="parallax-container">
+    <div class="parallax">
+	<img src="parallax3.jpg" class="responsive-img">
+    </div>
+ </div>
+
+ <div class="container center-align">
+ <div class="row">
+ <div class="col s12 l5">
+ <form action="">
+   <div class="input-field">
+      <i class="material-icons prefix">notifications</i>
+      <textarea id="reminders" class="materialize-textarea"></textarea>
+      <label for="reminders">Important Reminder</label>
+   </div>
+   <div class="input-field">
+      <i class="material-icons prefix">book</i>
+      <textarea id="exams" class="materialize-textarea"></textarea>
+      <label for="exams">Upcoming Exam</label>
+   </div>
+   <div class="input-field">
+      <i class="material-icons prefix">local_dining</i>
+      <textarea id="lunch" class="materialize-textarea"></textarea>
+      <label for="lunch">Lunch with</label>
+   </div>
+   <div class="input-field">
+      <i class="material-icons prefix">people</i>
+      <textarea id="meetings" class="materialize-textarea"></textarea>
+      <label for="meetings">Your Meeting</label>
+   </div>
+</form>
+</div>
+
+
+<!--Form-->
+
+<div class="col s12 l5">
+ <form action="">
+   <div class="input-field">
+      <i class="material-icons prefix">access_time</i>
+      <textarea id="remindersTime" class="materialize-textarea"></textarea>
+      <label for="remindersTime">at:</label>
+   </div>
+   <div class="input-field">
+      <i class="material-icons prefix">access_time</i>
+      <textarea id="examsTime" class="materialize-textarea"></textarea>
+      <label for="examsTime">at:</label>
+   </div>
+   <div class="input-field">
+      <i class="material-icons prefix">access_time</i>
+      <textarea id="lunchTime" class="materialize-textarea"></textarea>
+      <label for="lunchTime">at:</label>
+   </div>
+   <div class="input-field">
+      <i class="material-icons prefix">access_time</i>
+      <textarea id="meetingsTime" class="materialize-textarea"></textarea>
+      <label for="meetingsTime">at:</label>
+   </div>
+</form>
+</div>
+</div>
+</div>
+
+<!--Creating the Submit Button-->
+
+<div class="container right-align">
+<a href="#" class="btn red lighten-3 waves-effect waves-light">Submit</a>
+</div>
+
+<br>
+
+
+<!--Creating the Footer-->
+
+<footer class="page-footer red lighten-2">
+  <div class="container center-align">
+     <h5>Contact us at: yourweeklysched@gmail.com</h5>
+  </div>
+</footer>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+ 	
+	<!-- Compiled and minified JavaScript -->
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+						$('.sidenav').sidenav();
+						$('.parallax').parallax();
+					})
+	</script>
+
+</body>
+</html>

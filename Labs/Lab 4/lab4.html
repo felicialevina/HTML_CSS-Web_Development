@@ -1,0 +1,63 @@
+<html>
+<head>
+        <title>Lab 4 Form</title>
+        <link rel = "stylesheet" type = "text/css" href="style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<h1> INSERT YOUR INFORMATION + SELECT ALL THAT APPLY </h1>
+
+	<form action="http://www2.scs.ryerson.ca/~flevina/cgi-bin/lab4.pl" method="post">
+		<div>
+			<div class="part1">
+				<h3> What is your name? </h3> <br>
+				First name: <input type="text" name="first"><br>
+				<br>
+				Last name: <input type="text" name="last"><br>
+				<br>
+			</div>
+	
+			<div class="part3">
+				<h3> Why do you want to visit this place?</h3>
+				<textarea rows="7" cols="40" name="reason"> Enter the reasons here</textarea>
+			</div>
+		</div>
+	<br>
+	<div>
+		<div class="part2">
+			<h3> Choose one of the following place you want to visit?</h3>
+			<input type="checkbox" name="place" value="bali"> Bali <br>
+			<input type="checkbox" name="place" value="bangkok"> Bangkok <br>
+			<input type="checkbox" name="place" value ="maldives"> Maldives <br>
+			<input type="checkbox" name="place" value="shanghai"> Shanghai <br>
+			<input type="checkbox" name="place" value="seoul"> Seoul <br>
+			<input type="checkbox" name="place" value="tokyo"> Tokyo <br>
+		</div>
+		<div class="part4">
+			<h3> Select the suitable category for your visit </h3>
+			<select name ="purpose"> Purpose
+				<option> </option> 
+				<option value ="entertainment"> Entertainment </option>
+				<option value ="study"> Study </option>
+				<option value ="work"> Work </option>
+			</select>
+			<br> <br>
+			<h3> Who would you go with? </h3>
+			<select name="who">
+				<option> </option>
+			        <option value ="alone"> Alone </option>
+			        <option value ="family"> Family </option>
+				<option value ="friends"> Friends </option>
+				<option value ="colleagues"> Colleagues </option>
+			</select>
+			<br> <br>
+		</div>
+	</div>
+	<br>
+	<div class="part5"> 
+		<input type="submit" class="resize">
+	</div>
+	</form>
+</body>
+</html>

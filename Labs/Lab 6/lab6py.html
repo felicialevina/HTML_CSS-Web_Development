@@ -1,0 +1,109 @@
+<html>
+<head>
+	<title> Lab 6 Form </title>
+
+        <script type="text/JavaScript">
+
+
+        function formValidation() 
+	{
+		var n = document.registration.name;
+		
+		var p = document.registration.phone;
+
+		var result = name_validation(n) && phone_validation(p);
+		return result;	
+	}
+
+	function name_validation(n)
+	{
+		var n_len = n.value.length;
+		var n_char = /^[A-Za-z ]+$/;
+		if(n_len == 0) 
+		{
+			alert("Name cannot be empty");
+			return false;
+		}
+
+		if(!n.value.match(n_char)) 
+		{
+			alert("Name must be alphabet only");
+			return false;
+		} 
+
+		else 
+		{
+			return true;
+		}
+	}
+
+
+	function phone_validation(p)
+        {
+                var p_len = p.value.length;
+                var p_char = /^[1-9]{3}[-][0-9]{3}[-][0-9]{4}$/;
+                if(p_len == 0) 
+                {
+                        alert("Phone number cannot be empty");
+                        return false;
+                }
+
+                if(!p.value.match(p_char)) 
+                {
+                        alert("Incorrect phone number format");
+                        return false;
+                } 
+
+                else 
+                {
+                        return true;
+                }
+        }
+        </script>
+
+</head>
+
+<body style="background: url(https://pbs.twimg.com/media/DkMXUmAXsAAAON1.jpg); background-repeat: repeat-y; background-size: 100% auto;">
+
+	<h1 style="text-align:center;margin: 0px;"> User Profile Information </h1>
+	<h4 style='text-align:center; margin: 5px;'> Felicia Levina </h4>
+
+	<br><br><br><br><br><br><br><br><br><br><br> 
+
+	<form name="registration" action="http://www2.scs.ryerson.ca/~flevina/cgi-bin/lab6.py" method="post" onsubmit="return formValidation();">
+		<div style="width:25%; text-align: center; margin: auto; border: 5px double black;"> 
+			<br>
+			<h2> What is your name? </h2>
+			Name: <input type="text" name="name" style="margin-left: 25px;">
+			<br><br><br><br>			
+		</div>
+
+		<p style="font-size:5px;"></p><br><br><br><br><br><br><br><br><br><br>
+
+		<div style="width: 30%; text-align: center; margin:auto ; border: 5px double black;">
+			<br>
+			<h2> What is your address? </h2>
+			Street Address: <input type="text" name="address" style="margin-left: 15px;"><br><p style="font-size:5px;"></p>
+			City: <input type="text" name="city" style="margin-left: 81px;"><br><p style="font-size:5px;"></p>
+			Province: <input type="text" name="province" style="margin-left: 52px;"><br>
+			<br>
+		</div>
+
+		<p style="font-size:10px;"></p><br><br><br><br><br><br><br><br><br>
+
+		<div style="width: 35%; text-align: center; margin:auto; border: 5px double black;">
+			<br>
+			<h2> What is your phone number? </h2>
+			<p> Format: XXX-XXX-XXXX </p>
+			Phone Number: <input type="text" name="phone" style="margin-left: 40px;">
+			<br><br>
+		</div>
+
+		<br>
+
+		<div style="text-align:center;">
+			<input type="submit">
+		</div>
+	</form>
+</body>
+</html>

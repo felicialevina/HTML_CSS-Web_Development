@@ -1,0 +1,112 @@
+Source Code
+
+<html>
+<head>
+        <title> Build Potato Head </title>
+        <link rel = "stylesheet" type = "text/css" href="style.css"/>  
+
+<style>
+.drag{position:relative;}
+</style>
+
+<script type="text/JavaScript">
+var ogParts=document.getElementById&&!document.all;
+var isdrag=false;
+var x,y;
+var destParts;
+function movemouse(e)
+{
+  if (isdrag)
+  {
+    destParts.style.left = ogParts ? tx + e.clientX - x : tx + event.clientX - x;
+    destParts.style.top  = ogParts ? ty + e.clientY - y : ty + event.clientY - y;
+    return false;
+  }
+}
+function selectmouse(e) 
+{
+  var finalParts       = ogParts ? e.target : event.srcElement;
+  var topelement = ogParts ? "HTML" : "BODY";
+
+  while (finalParts.tagName != topelement && finalParts.className != "drag")
+  {
+    finalParts = ogParts ? finalParts.parentNode : finalParts.parentElement;
+  }
+
+  if (finalParts.className=="drag")
+  {
+    isdrag = true;
+    destParts = finalParts;
+    tx = parseInt(destParts.style.left+0);
+    ty = parseInt(destParts.style.top+0);
+    x = ogParts ? e.clientX : event.clientX;
+    y = ogParts ? e.clientY : event.clientY;
+    document.onmousemove=movemouse;
+    return false;
+  }
+}
+document.onmousedown=selectmouse;
+document.onmouseup=new Function("isdrag=false");
+</script>
+
+</head>
+
+<body>
+        <h1> Build Your Own Potato Head </h1>
+        <h5> Felicia Levina </h5>
+<table>
+<tr>
+<td>
+<p><i> Drag parts to build Potato Head </i></p>
+<br><br>
+<img src="body.png">
+</td>
+<td>
+
+  <table>
+  <tr>
+  <td>
+  <img src="hat1.png" class="drag">
+  <img src="hat2.png" class="drag">
+  <img src="hat3.png" class="drag">
+  <img src="hat4.png" class="drag">
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <img src="eye1.png" class="drag">
+  <img src="eye2.png" class="drag">
+  <img src="eye3.png" class="drag">
+  <img src="eye4.png" class="drag">
+  <img src="eye5.png" class="drag">
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <img src="nos1.png" class="drag">
+  <img src="nos2.png" class="drag">
+  <img src="mous1.png" class="drag">
+  <img src="mous2.png" class="drag">
+  <img src="mous3.png" class="drag">
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <img src="mout1.png" class="drag">
+  <img src="mout2.png" class="drag">
+  <img src="mout3.png" class="drag">
+  <img src="mout4.png" class="drag">
+  <img src="mout5.png" class="drag">
+  <img src="arm1.png" class="drag">
+  </td>
+  </tr>
+  </table>
+
+</tr>
+</table>
+
+</body>
+</html>

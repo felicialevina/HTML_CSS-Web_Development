@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        
+	<title> CPS 530 Lab 8</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<h1 style="text-align: center; " id = "content"> </h1>
+<h4> Felicia Levina </h4>
+
+<p style="padding: 10px; border-style: dotted; border-radius: 10px; margin-left: auto; margin-right: auto; height: 350px; width: 350px;" id = artwork></p>
+
+<h2 style="text-align:center;"><u> Song Information </u></h2>
+
+<p style="text-align:center;" id = "title"></p>
+<p style="text-align:center;" id = "artist"></p>
+<p style="text-align:center;" id = "album"></p>
+<p style="text-align:center;" id = "sid"></p>
+<p style="text-align:center;" id = "datetime"></p>
+
+<script>
+               
+var file =                
+{
+                          
+        "data": 
+        {
+                "content": "Yimago 2 / Hawaiian Music Radio",
+                "tracks": 
+                {
+                        "title": "Mudfootball [For Moe Lerner] [2001]",
+                        "artist": "Jack Johnson",
+                        "album": "Brushfire Fairytales",
+                        "artwork": "https://f4.bcbits.com/img/a0215700204_10.jpg",
+			"sid":"46009",
+			"datetime": "Nov 24, 2019, 07:27 PM", 
+                }
+        }       
+};
+                
+document.getElementById("content").innerHTML=  file.data.content ;
+
+var artwork = new Image(350,350);                
+artwork.src = file.data.tracks.artwork;
+
+document.getElementById("artwork").appendChild(artwork);                
+document.getElementById("title").innerHTML = '<p><b> Song Title:</b> ' + file.data.tracks.title + '</p>';
+document.getElementById("artist").innerHTML = '<p><b> Song Artist:</b> '  + file.data.tracks.artist + '</p>';
+document.getElementById("album").innerHTML = '<p><b> Song Album:</b> ' + file.data.tracks.album + '</p>';
+document.getElementById("sid").innerHTML = '<p><b> Song ID:</b> '  + file.data.tracks.sid + '</p>';
+document.getElementById("datetime").innerHTML = '<p><b> Date and Time:</b> ' + file.data.tracks.datetime + '</p>';
+ 
+</script>
+
+</div>
+</body>
+</html>

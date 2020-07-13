@@ -1,0 +1,122 @@
+@font-face{
+	font-family: PrimeTime;
+	src: url(primetime.ttf);
+}
+
+body {
+	background-color: #FAAFBA;
+	color: black;
+	}
+
+
+h1, h2 {
+	text-align: center;
+	font-family: PrimeTime;
+	color: #333333;
+}
+
+
+
+img {
+	display: block;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+table {
+	margin-left: 15px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	font-size: 18px;
+	font-family: monospace;
+}
+
+th.members {
+	width: 350px;
+	border: 1px solid black;
+	font-size: 20px;
+	font-family: monospace;
+	vertical-align: middle;
+	horizontal-align: middle;
+	letter-spacing: 0.5em;
+}
+
+
+th.biography {
+        width: 350px;
+        border: 1px solid black;
+        font-size: 20px;
+        font-family: monospace;
+        vertical-align: middle;
+        horizontal-align: middle;
+	letter-spacing: 0.5em;
+}
+
+th.facts {
+        width: 525px;
+        border: 1px solid black;
+        font-size: 20px;
+        font-family: monospace;
+        vertical-align: middle;
+        horizontal-align: middle;
+	letter-spacing: 0.5em;
+}
+
+td.members {
+	text-align: center;
+	border: 1px solid black;
+	font-size: 15 px;
+	font-family: arial;
+}
+
+td.biography {
+	text-align: left;
+	border: 1px solid black;
+	font-size: 13px;
+	font-family: arial;
+}
+
+td.facts {
+	text-align: left;
+	border: 1px solid black;
+	font-size: 13px;
+	font-family: arial;
+}
+
+
+.centerPos 
+{
+	text-align: center;
+}
+
+
+.centerAud
+{
+	margin-left: 40%;
+	display: block;
+}
+
+.button
+{
+	background-color: #B38481;
+	color: white;
+	text-align: center;
+	padding: 15px 20px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	font-family: impact;
+	letter-spacing: 0.1em;
+	margin: 5px;
+	transition: 0.75s;
+	-moz-transition: 0.75s;
+	-webkit-transition: 0.75s;
+	-o-transition: 0.75s;
+}
+
+.button:hover 
+{
+	background-color: #555555;
+	color: #F5F5F5;
+}
+

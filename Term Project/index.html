@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title> CPS 530 Project </title>
+	<style>
+	.col.s6 {
+	min-height:100vh;
+	}
+	table{
+	table-layout: fixed;}
+	td.t{
+	text-align:center;}
+	</style>
+</head>
+
+<body >
+	<nav class = "nav-wrapper grey darken-2">
+	<div class="container">
+	<a href="#" class="brand-logo"> Materialize//Django</a>
+	<a href="#" class="sidenav-trigger" data-target="mobile-links">
+		<i class="material-icons">menu</i>
+	</a>
+	<ul class="right hide-on-med-and-down">
+		<li><a href="#" class="waves-effect waves-light"> Home </a></li>
+                <li><a href="install.html" class="waves-effect waves-light"> Install </a></li>
+                <li><a href="tutor.html" class="waves-effect waves-light"> Tutorials </a></li>
+                <li><a href="demo.html" class="waves-effect waves-light"> Demo </a></li>
+                <li><a href="rate.html" class="waves-effect waves-light"> Ratings </a></li>
+                <li><a href="credits.html" class="waves-effect waves-light"> Credits </a></li>
+	</ul>
+	</div>
+	</nav>
+	
+	<ul class="sidenav" id="mobile-links">
+		<li><a href="#" class="waves-effect waves-light"> Home </a></li>
+                <li><a href="install.html" class="waves-effect waves-light"> Install </a></li>
+                <li><a href="tutor.html" class="waves-effect waves-light"> Tutorials </a></li>
+                <li><a href="demo.html" class="waves-effect waves-light"> Demo </a></li>
+                <li><a href="main.html" class="waves-effect waves-light"> Ratings </a></li>
+                <li><a href="credits.html" class="waves-effect waves-light"> Credits </a></li>
+	</ul>
+
+	<div class = "row" style="margin-bottom:0px; padding:2px;">
+		<div class = "red lighten-3 col s6">
+			<h4 style="text-decoration:underline; text-align:center;"> Materialize </h4>	
+			<table class="striped">
+				<tbody>
+					<tr>
+						<td class="t"><b> Popularity </b></td>
+
+						<td> 1. Very popular due to its implementation of Google's Material Design which is one of the most favored design languages by developers <br> 2. Gives websites a very consistent and elegant look </td>
+					</tr>
+					<tr>
+						<td class="t"><b> Strengths </b></td>
+						<td> 1. Combines classic principles of good design and essential design principles such as browser portability and responsiveness <br> 2. Extremely light and requires minimal codigng time due to its built-in features including (parallax elements, flow texts, cards, hoverable items and objects) <br> 3. Ease-of-use as it provides detailed documented and specific code examples <br> 4. Easy installation </td>
+					</tr>
+                                        <tr>
+                                                <td class="t"><b> Weaknesses </b></td>
+                                                <td> 1. Anything outside Google's Material Design Framework implementation is possible to become out-of-date <br> 2. Has potential to not work on some browsers other than Google Chrome <br> 3. Large file size makes Materialize a bulky framework to work with  </td>
+                                        </tr>
+                                        <tr>
+                                                <td class="t"><b> Which developers mostly use it? </b></td>
+                                                <td> 1. Front-end developers <br> 2. Web developers who understand basic HTML and CSS </td>
+                                        </tr>
+                                        <tr>
+                                                <td class="t"><b> What kind of websites use it? </b></td>
+                                                <td> 1. Informative websites (GeeksforGeeks) <br> 2. News websites (La Stampa) <br> 3. Admin websites</td>
+                                        </tr>
+				<tbody>
+			</table>
+		<br><br>
+
+		</div>
+
+		<div class = "teal lighten-3 col s6">
+			<h4 style="text-decoration:underline; text-align:center;"> Django </h4>
+                        <table class="striped">
+                                <tbody>
+                                        <tr>
+                                                <td class="t"><b> Popularity </b></td>
+                                                <td> 1. Django has been rapidly gaining popularity for its pragmatic design and ease of use. It also encouranges rapid development and clean design <br> 2. Django is a Python based framework and it is popular because python itself is one of the simplest coding languages </td>
+                                        </tr>
+                                        <tr>
+                                                <td class="t"><b> Strengths </b></td>
+                                                <td> 1. Django came with documentation far above the usual standard which works well for quick reference <br> 2. Django prevents common security mistakes. Django does it by hiding your site's source code by dynamically generating web pages <br> 3. Django also has a big and interactive community that answer questions fast
+</td>
+                                        </tr>
+                                        <tr>
+                                                <td class="t"><b> Weaknesses </b></td>
+                                                <td> 1. Django URL uses regex as URL routing patterns and this makes the code larger and creates complicated syntaxes <br> 2. Django focuses more about dev productivity and backward compatibility than its speed <br> 3. Template errors fail silently by default </td>
+                                        </tr>
+                                        <tr>
+                                                <td class="t"><b> Which developers mostly use it? </b></td>
+                                                <td> 1. Back-end developers <br> 2. Developers who knows python </td>
+                                        </tr>
+                                        <tr>
+                                                <td class="t"><b> What kind of websites use it? </b></td>
+                                                <td> 1. Top content-driven websites (The Washington Post, New York Times, The Guardian) <br> 2. Cloud storage platform (Dropbox) <br> 3. Social networks / Platforms (Instagram, Spotify, YouTube) </td>
+                                        </tr>
+                                <tbody>
+                        </table>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>	
+ 	
+	<!-- Compiled and minified JavaScript -->
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	
+	<script>
+		$(document).ready(function(){
+			$('.sidenav').sidenav();
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<response type="result">
+  <data>
+    <item>
+      <title>Yimago 2 / Hawaiian Music Radio</title>
+      <song>Jack Johnson - Belle [2005]</song>
+      <track>
+        <artist>Jack Johnson</artist>
+        <title>Belle [2005]</title>
+        <album>In Between Dreams</album>
+        <royaltytrackid>0</royaltytrackid>
+        <started>1574283007</started>
+        <id>46014</id>
+        <length>0</length>
+        <playlist>
+          <id>1579</id>
+          <title>Y2 &gt; General</title>
+        </playlist>
+        <buyurl></buyurl>
+        <imageurl>https://images-na.ssl-images-amazon.com/images/I/61ctB4pSIOL.jpg</imageurl>
+      </track>
+      <bitrate>64 Kbps</bitrate>
+      <server>Online</server>
+      <autodj>Online</autodj>
+      <source>Yes</source>
+      <offline></offline>
+      <summary>&lt;a href=&quot;http://199.195.194.92:2199/tunein/-stream/meyima03.pls&quot;&gt;Yimago 2 / Hawaiian Music Radio - Jack Johnson - Belle [2005]&lt;/a&gt;</summary>
+      <listeners>2</listeners>
+      <maxlisteners>100</maxlisteners>
+      <reseller>0</reseller>
+      <serverstate>1</serverstate>
+      <sourcestate>1</sourcestate>
+      <sourceconn>1</sourceconn>
+      <date>Nov 20, 2019</date>
+      <time>10:51 AM</time>
+      <rawmeta>Jack Johnson - Belle [2005]</rawmeta>
+      <mountpoint>/stream</mountpoint>
+      <tuneinurl>http://199.195.194.94:8183/stream</tuneinurl>
+      <directtuneinurl></directtuneinurl>
+      <proxytuneinurl></proxytuneinurl>
+      <tuneinformat>aac</tuneinformat>
+      <webplayer>muses</webplayer>
+      <servertype>ShoutCast2</servertype>
+      <listenertotal>2</listenertotal>
+      <url>http://199.195.194.92:2199/rpc</url>
+    </item>
+  </data>
+</response>
